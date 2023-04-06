@@ -2,31 +2,31 @@ let movies = [
   {
     name: "Falcon and the winter soldier",
     des:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta ex, dolor sit amet consectetur adipisicing elit. Dict",
+      "Following the events of Avengers: Endgame, Sam Wilson and Bucky Barnes team up in a global adventure that tests their abilities and their patience.",
     img: "assets/slider 2.png"
   },
   {
     name: "Loki",
     des:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta ex, dolor sit amet consectetur adipisicing elit. Dict",
+      "The mercurial villain Loki resumes his role as the God of Mischief in a new series that takes place after the events of Avengers Endgame.",
     img: "assets/slider 1.png"
   },
   {
     name: "Wanda Vision",
     des:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta ex, dolor sit amet consectetur adipisicing elit. Dict",
+      "Living idealized suburban lives, super-powered beings Wanda and Vision begin to suspect that everything is not as it seems.",
     img: "assets/slider 3.png"
   },
   {
     name: "Raya and the last dragon",
     des:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta ex, dolor sit amet consectetur adipisicing elit. Dict",
+      "Raya, a warrior, sets out to track down Sisu, a dragon, who transferred all her powers into a magical gem which is now scattered all over the kingdom of Kumandra, dividing its people.",
     img: "assets/slider 4.png"
   },
   {
     name: "Luca",
     des:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta ex, dolor sit amet consectetur adipisicing elit. Dict",
+      "Set in a beautiful seaside town on the Italian Riviera, the original animated feature is a coming-of-age story about one young boy experiencing an unforgettable summer filled with gelato, pasta and endless scooter rides. ",
     img: "assets/slider 5.png"
   }
 ];
@@ -54,6 +54,7 @@ const createSlide = () => {
   p.appendChild(document.createTextNode(movies[slideIndex].des));
   content.appendChild(h1);
   content.appendChild(p);
+  slide.appendChild(content);
   slide.appendChild(imgElement);
   carousel.appendChild(slide);
 
@@ -64,8 +65,8 @@ const createSlide = () => {
   // setting element classnames
   slide.className = "slider";
   content.className = "slide-content";
-  h1.className = "movies-title";
-  p.className = "movies-des";
+  h1.className = "movie-title";
+  p.className = "movie-des";
 
   sliders.push(slide);
 
